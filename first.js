@@ -208,12 +208,12 @@ console.log("!True", !true); // Expected output: false
 // Conditional Statements
 // -------------------------
 // If, Else If, Else
-let age = 16;
-if (age >= 18) {
-    console.log("can vote");
-} else {
-    console.log("cannot vote");
-} // Expected output: "cannot vote"
+// let age = 16;
+// if (age >= 18) {
+//     console.log("can vote");
+// } else {
+//     console.log("cannot vote");
+// } // Expected output: "cannot vote"
 
 // Ternary Operator
 let status = age > 18 ? "Adult" : "Not Adult";
@@ -243,6 +243,137 @@ if(score >= 80) {
 } else {
     console.log("F");
 } // Expected output: "C"
+
+
+
+// Chapter 3: Loops and Conditional Statements
+
+// ---FOR LOOP---
+// Example: Print a statement multiple times
+for (let i = 1; i < 5; i++) {
+    console.log("My name is Goutam Tiwari");
+    // Expected output: "My name is Goutam Tiwari" printed 4 times
+}
+
+// Example: Calculating the sum from 1 to n
+let n = 5;
+let sum = 0;
+for (let i = 1; i <= n; i++) {
+    sum += i;
+}
+console.log(sum); // Expected output: 15
+console.log(typeof sum); // Expected output: number
+console.log("End of loop");
+
+// Important Note: Avoid writing infinite loops to prevent website crashes.
+
+// ---WHILE LOOP---
+let n = 5;
+let i = 1;
+while (i <= n) {
+    console.log("i = ", i);
+    // Expected output: "i = 1" to "i = 5"
+    i++;
+}
+
+// Example: Print a name multiple times
+i = 1;
+while (i <= n) {
+    console.log("Goutam name print 5 times");
+    // Expected output: "Goutam name print 5 times" printed 5 times
+    i++;
+}
+
+// Example: Calculating sum using while loop
+i = 1;
+sum = 0;
+while (i <= n) {
+    sum += i;
+    i++;
+}
+console.log(sum); // Expected output: 15
+
+// Printing sum at each step
+i = 1;
+sum = 0;
+while (i <= 5) {
+    sum += i;
+    i++;
+    console.log("i = " + sum);
+    // Expected output: "i = 1" to "i = 15" (sum at each step)
+}
+
+// ---DO-WHILE LOOP---
+// Example: Executes at least once regardless of the condition
+i = 1;
+do {
+    console.log("hello Dear community atleast one time run");
+    // Expected output: "hello Dear community atleast one time run"
+    i++;
+} while (i < 1);
+
+// ---FOR-OF LOOP---
+// Example: Iterating over a string
+let str = "Goutam-Tiwari";
+let size = 0;
+for (let char of str) {
+    console.log("char = ", char);
+    size++;
+}
+console.log(size); // Expected output: Length of "Goutam-Tiwari"
+
+// ---FOR-IN LOOP---
+// Example: Iterating over an object to access keys and values
+let Employee = {
+    name: "Goutam Tiwari",
+    age: 20,
+    sex: "male"
+};
+
+for (let key in Employee) {
+    console.log("key = ", key, "value = ", Employee[key]);
+    // Expected output: key = name value = Goutam Tiwari, and so on for each property
+}
+
+// ---PRACTICE QUESTIONS---
+// Q1: Print all even numbers from 0 to 100 //even number
+for (let i = 0; i <= 100; i++) {
+    if (i % 2 === 0) {
+        console.log("i = ", i);
+        // Expected output: Even numbers from 0 to 100
+    }
+}
+
+// Q2: Guessing Game 
+let gameNumber = 30;
+let userNumber = parseInt(prompt("Guess a random number:"));
+while(userNumber != gameNumber){
+    userNumber = parseInt(prompt("You guessed wrong. Guess again:"));
+}
+console.log("Congrats! You guessed the right number.");
+
+// ---STRINGS & TEMPLATE LITERALS---
+// Example of template literals
+let pen = {
+    name: "Techno",
+    prize: 50
+};
+let output = `The name of pen is ${pen.name} of cost = ${pen.prize} rupees`;
+console.log(output); // Expected output: The name of pen is Techno of cost = 50 rupees
+
+// ---STRING METHODS/FUNCTIONS---
+// Strings are immutable in JavaScript. To reflect changes, reassign the modified string to the original variable.
+let str4 = "Hello Roshni";
+str4 = str4.toUpperCase();
+console.log(str4); // Expected output: HELLO ROSHNI
+
+// ---PRACTICE TIME---
+// Prompt user for full name, generate a username with @, full name, and length of full name
+let fullName = prompt("Enter your Fullname");
+let userName = "@" + fullName.replace(" ", "") + fullName.length;
+console.log(userName);
+
+// This organized and simplified version should help in quick understanding and revision of loops, conditional statements, and basic string manipulation in JavaScript.
 
 
 
